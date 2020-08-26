@@ -1,9 +1,17 @@
 import React from "react";
+import { Columns } from "react-bulma-components";
 
 const App = () => {
   return (
     <div>
-      <h1>Hi</h1>
+      <Columns gapless>
+        <Columns.Column style={{ backgroundColor: "red", height: "100vh" }}>
+          <p className="bd-notification is-success">First Column</p>
+        </Columns.Column>
+        <Columns.Column>
+          <p className="bd-notification is-info"> Middle Column</p>
+        </Columns.Column>
+      </Columns>
     </div>
   );
 };
