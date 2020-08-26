@@ -3,10 +3,18 @@ import { Navbar } from "react-bulma-components";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
-  const [openNav, setOpenNav] = useState(false);
-  const burger = () => {
-    const burgerNav = document.getElementById("burger");
-    console.log("hi");
+  const [isActive, setisActive] = useState(false);
+  const click = () => {
+    setisActive(!isActive);
+    const navBurger = document.querySelector(".navbar-burger");
+    const navBar = document.querySelector(".navbar-menu");
+    if (isActive) {
+      navBurger.classList.add("is-active");
+      navBar.classList.add("is-active");
+    } else {
+      navBurger.classList.remove("is-active");
+      navBar.classList.remove("is-active");
+    }
   };
   return (
     <div>
@@ -17,7 +25,7 @@ const Navigation = () => {
               <Navbar.Item>Adnan</Navbar.Item>
             </Link>
           </Navbar.Item>
-          <Navbar.Burger onClick={burger} />
+          <Navbar.Burger onClick={click} />
         </Navbar.Brand>
         <Navbar.Menu>
           <Navbar.Container position="end">
