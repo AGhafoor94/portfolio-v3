@@ -1,20 +1,28 @@
 import React from "react";
-import { Hero, Section, Container, Heading } from "react-bulma-components";
+import { Hero, Container, Heading } from "react-bulma-components";
+
+const style = {
+  background: {
+    backgroundColor: "#24273f",
+  },
+  text: {
+    color: "#ffffff",
+  },
+};
+
 const Home = () => {
   return (
     <div>
-      <Section>
-        <Hero color="primary">
-          <Hero.Body>
-            <Container>
-              <Heading>Hero title Primary</Heading>
-              <Heading subtitle size={3}>
-                Subtitle
-              </Heading>
-            </Container>
-          </Hero.Body>
-        </Hero>
-      </Section>
+      <Hero style={style.background}>
+        <Hero.Body>
+          <Container>
+            <Heading style={style.text}>My Portfolio</Heading>
+            <Heading style={style.text} subtitle size={3}>
+              Subtitle
+            </Heading>
+          </Container>
+        </Hero.Body>
+      </Hero>
     </div>
   );
 };
