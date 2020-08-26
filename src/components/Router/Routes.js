@@ -1,34 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "../Home/Home";
 import Contact from "../Contact/Contact";
 import Portfolio from "../Portfolio/Portfolio";
-import { Navbar } from "react-bulma-components";
+
+import Navigation from "../Navigation/Navigation";
 
 const Routes = () => {
   return (
     <div>
       <Router>
-        <Navbar>
-          <Navbar.Brand>
-            <Navbar.Item>
-              <Link to="/">
-                <Navbar.Item>Adnan</Navbar.Item>
-              </Link>
-            </Navbar.Item>
-            <Navbar.Burger />
-          </Navbar.Brand>
-          <Navbar.Menu>
-            <Navbar.Container>
-              <Link to="/portfolio">
-                <Navbar.Item>Portfolio</Navbar.Item>
-              </Link>
-              <Link to="/contact">
-                <Navbar.Item>Contact</Navbar.Item>
-              </Link>
-            </Navbar.Container>
-          </Navbar.Menu>
-        </Navbar>
+        <Navigation />
         <Switch>
           <Route path="/contact">
             <Contact />
