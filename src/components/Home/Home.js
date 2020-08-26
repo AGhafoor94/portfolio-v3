@@ -1,6 +1,5 @@
 import React from "react";
-import { Hero, Heading, Section, Container } from "react-bulma-components";
-
+import { Hero, Section, Container, Heading } from "react-bulma-components";
 const Home = () => {
   return (
     <div>

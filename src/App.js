@@ -1,15 +1,18 @@
 import React from "react";
-import { Switch, Route, Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./components/Home/Home";
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/"></Route>
-        <Route path="/about"></Route>
-        <Route path="/portfolio"></Route>
-      </Switch>
-    </Router>
+    <div>
+      <Router>
+        <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 };
 
