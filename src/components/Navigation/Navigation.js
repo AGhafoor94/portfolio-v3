@@ -20,13 +20,19 @@ const Navigation = () => {
     <div>
       <Navbar>
         <Navbar.Brand>
-          <Link to="/">Adnan</Link>
+          <Link to="/">
+            <Navbar.Item renderAs="li">Adnan</Navbar.Item>
+          </Link>
           <Navbar.Burger onClick={click} />
         </Navbar.Brand>
         <Navbar.Menu>
           <Navbar.Container position="end">
-            <Link to="/portfolio">Portfolio</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/portfolio">
+              <Navbar.Item renderAs="li">Portfolio</Navbar.Item>
+            </Link>
+            <Link to="/contact">
+              <Navbar.Item renderAs="li">Contact</Navbar.Item>
+            </Link>
           </Navbar.Container>
         </Navbar.Menu>
       </Navbar>
