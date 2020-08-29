@@ -1,5 +1,7 @@
 import React from "react";
 import { Card, Content } from "react-bulma-components";
+import Moment from "react-moment";
+
 const Cards = ({
   title,
   githubUrl,
@@ -14,19 +16,37 @@ const Cards = ({
       <Card>
         <Card.Header>
           <Card.Header.Title>
-            <a href={githubUrl}>{title}</a>
+            <a
+              style={{
+                textAlign: "center",
+              }}
+              href={githubUrl}
+            >
+              {title}
+            </a>
           </Card.Header.Title>
         </Card.Header>
-        <Card.Content>
+        <Card.Content style={{ paddingBottom: 0 }}>
           <Content>
             {description}
             <br />
-            <a href={sshLink}>SSH Link</a>
+            <a style={{ float: "left" }} href={sshLink}>
+              SSH Link
+            </a>
+            <a style={{ float: "right" }} href={htmlLink}>
+              HTML Link
+            </a>
             <br />
-            <a href={htmlLink}>HTML Link</a>
-            <br />
-            <small>
-              <time dateTime="2016-1-1">Created: {created}</time>
+            <small
+              style={{
+                textAlign: "center",
+                margin: "10px 0 0 0",
+                display: "block",
+              }}
+            >
+              <strong>
+                Created: <Moment format="DD/MM/YYYY" date={created} />
+              </strong>
             </small>
           </Content>
         </Card.Content>

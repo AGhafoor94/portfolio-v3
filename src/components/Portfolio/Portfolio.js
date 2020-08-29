@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {
-  Section,
   Container,
-  Heading,
   Loader,
-  Dropdown,
+  Notification,
+  Button,
 } from "react-bulma-components";
 import Cards from "../Cards/Cards";
 
@@ -55,9 +54,16 @@ const Portfolio = () => {
                 title={item.name}
                 created={item.created_at}
                 githubUrl={item.html_url}
-                description={item.description}
+                description={
+                  item.description ? (
+                    item.description
+                  ) : (
+                    <p>No description given</p>
+                  )
+                }
                 sshLink={item.ssh_url}
                 htmlLink={item.git_url}
+                homepage={item.homepage}
               />
             );
           })}

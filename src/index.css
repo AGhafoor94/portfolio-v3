@@ -1,7 +1,3 @@
-body {
-  margin: 0 auto;
-  min-height: calc(100vh-0-60vh);
-}
 a li {
   margin-top: 5px;
 }
@@ -9,9 +5,36 @@ a li:hover {
   transition: 0.5s;
   color: orange;
 }
+.container {
+  min-height: 100%;
+  padding-bottom: 60px;
+}
+.card {
+  width: 65%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  border-bottom: 2px solid darkorange;
+}
+.card a {
+  color: darkorange;
+}
+.content a {
+  margin-top: 10px;
+}
 .navbar {
   border-bottom: 3px solid orange;
 }
+.card-header-title,
+.card-footer-item {
+  background-color: #24273f0a;
+  text-align: center;
+}
 .footer {
   border-top: 3px solid orange;
+}
+@media screen and (max-width: 900px) {
+  .card {
+    width: 90%;
+  }
 }
