@@ -1,50 +1,42 @@
 import React from "react";
-import { Card, Media, Content, Image, Heading } from "react-bulma-components";
+import { Card, Content } from "react-bulma-components";
 const Cards = ({
   title,
-  heading,
+  githubUrl,
   description,
-  htmlUrl,
-  downloadLink,
+  sshLink,
+  htmlLink,
   homepage,
   created,
 }) => {
   return (
-    <Card>
-      <Card.Header>
-        <Card.Header.Title>{title}</Card.Header.Title>
-      </Card.Header>
-      <Card.Content>
-        <Media>
-          <Media.Item renderAs="figure" position="left">
-            <Image
-              size={64}
-              alt="64x64"
-              src="http://bulma.io/images/placeholders/128x128.png"
-            />
-          </Media.Item>
-          <Media.Item>
-            <Heading size={4}>{heading}</Heading>
-            <Heading subtitle size={6}>
-              {htmlUrl}
-            </Heading>
-          </Media.Item>
-        </Media>
-        <Content>
-          {description}
-          <br />
-          <time dateTime="2016-1-1">{created}</time>
-        </Content>
-      </Card.Content>
-      <Card.Footer>
-        <Card.Footer.Item renderAs="a" href={homepage}>
-          Homepage of App
-        </Card.Footer.Item>
-        <Card.Footer.Item renderAs="a" href={downloadLink}>
-          Download Link
-        </Card.Footer.Item>
-      </Card.Footer>
-    </Card>
+    <div style={{ marginTop: "10px", marginBottom: "10px" }}>
+      <Card>
+        <Card.Header>
+          <Card.Header.Title>
+            <a href={githubUrl}>{title}</a>
+          </Card.Header.Title>
+        </Card.Header>
+        <Card.Content>
+          <Content>
+            {description}
+            <br />
+            <a href={sshLink}>SSH Link</a>
+            <br />
+            <a href={htmlLink}>HTML Link</a>
+            <br />
+            <small>
+              <time dateTime="2016-1-1">Created: {created}</time>
+            </small>
+          </Content>
+        </Card.Content>
+        <Card.Footer>
+          <Card.Footer.Item renderAs="a" href={homepage}>
+            Homepage of App
+          </Card.Footer.Item>
+        </Card.Footer>
+      </Card>
+    </div>
   );
 };
 export default Cards;

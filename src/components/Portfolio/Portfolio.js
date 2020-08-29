@@ -7,6 +7,7 @@ import {
   Loader,
   Dropdown,
 } from "react-bulma-components";
+import Cards from "../Cards/Cards";
 
 const style = {
   loadingStyle: {
@@ -48,22 +49,18 @@ const Portfolio = () => {
         </Container>
       ) : (
         <Container fluid>
-          <p className="bd-notification is-info">
-            <Heading size={5} renderAs="p">
-              Fluid
-            </Heading>
-            <Heading subtitle renderAs="p">
-              <Dropdown hoverable value="item" label={("label", "")}>
-                {apiData.map((item, index) => {
-                  return (
-                    <Dropdown.Item value={item.id} key={index}>
-                      {item.name}
-                    </Dropdown.Item>
-                  );
-                })}
-              </Dropdown>
-            </Heading>
-          </p>
+          {apiData.map((item, index) => {
+            return (
+              <Cards
+                title={item.name}
+                created={item.created_at}
+                githubUrl={item.html_url}
+                description={item.description}
+                sshLink={item.ssh_url}
+                htmlLink={item.git_url}
+              />
+            );
+          })}
         </Container>
       )}
     </div>
