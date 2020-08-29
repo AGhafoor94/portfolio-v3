@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Content } from "react-bulma-components";
 import Moment from "react-moment";
+import "./index.css";
 
 const Cards = ({
   title,

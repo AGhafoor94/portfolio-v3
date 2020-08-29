@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import {
-  Container,
-  Loader,
-  Notification,
-  Button,
-} from "react-bulma-components";
-import Cards from "../Cards/Cards";
+import { Container, Loader } from "react-bulma-components";
+import Cards from "../../components/Cards/Cards";
 
 const style = {
   loadingStyle: {
@@ -15,7 +10,7 @@ const style = {
     border: "2px solid orange",
     borderTopColor: "transparent",
     borderRightColor: "transparent",
-    align: "center",
+    display: "block",
     textAlign: "center",
     marginTop: "20%",
   },
@@ -58,7 +53,7 @@ const Portfolio = () => {
                   item.description ? (
                     item.description
                   ) : (
-                    <p>No description given</p>
+                    <p>NO DESCRIPTION AVAILABLE</p>
                   )
                 }
                 sshLink={item.ssh_url}
