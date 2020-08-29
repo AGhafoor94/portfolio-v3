@@ -1,5 +1,5 @@
 import React from "react";
-import { Hero, Container, Heading } from "react-bulma-components";
+import { Hero, Container, Heading, Loader } from "react-bulma-components";
 
 const style = {
   background: {

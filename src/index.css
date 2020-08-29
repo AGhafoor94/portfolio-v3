@@ -1,0 +1,13 @@
+a li {
+  margin-top: 5px;
+}
+a li:hover {
+  transition: 0.5s;
+  color: orange;
+}
+.navbar {
+  border-bottom: 3px solid orange;
+}
+.footer {
+  border-top: 3px solid orange;
+}
