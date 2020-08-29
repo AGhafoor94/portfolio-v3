@@ -1,24 +1,17 @@
 import React from "react";
 import { Hero, Container, Heading } from "react-bulma-components";
-
-const style = {
-  background: {
-    backgroundColor: "#24273f",
-  },
-  text: {
-    color: "#ffffff",
-  },
-};
+import "./index.css";
 
 const Home = () => {
   return (
     <div>
-      <Hero style={style.background}>
+      <Hero className="background">
         <Hero.Body>
           <Container>
-            <Heading style={style.text}>My Portfolio</Heading>
-            <Heading style={style.text} subtitle size={3}>
-              Subtitle
+            <Heading>My Portfolio</Heading>
+            <Heading subtitle size={4}>
+              Welcome to my Portfolio website made in React and using hooks for
+              state.
             </Heading>
           </Container>
         </Hero.Body>

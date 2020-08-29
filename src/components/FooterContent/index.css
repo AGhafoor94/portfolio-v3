@@ -3,7 +3,13 @@
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 60px;
+  border-top: 3px solid orange;
   text-align: center;
   background-color: #24273f;
   color: #ffffff;
+  padding: 1rem;
+}
+.hero-footer {
+  margin-top: 10px;
 }

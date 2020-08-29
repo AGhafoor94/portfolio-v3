@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Navbar } from "react-bulma-components";
 import { Link } from "react-router-dom";
+import "./index.css";
 
 const Navigation = () => {
   const [isActive, setisActive] = useState(false);

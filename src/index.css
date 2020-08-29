@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100%;
+  background-color: #181a29;
+}
+.title,
+.subtitle {
+  color: #ffffff;
+}
+#root {
+  background-color: #181a29;
+}
+a li {
+  margin-top: 5px;
+}
+a li:hover {
+  transition: 0.5s;
+  color: orange;
+}
+.container {
+  min-height: 100%;
+  padding-bottom: 60px;
+}
+.content a {
+  margin-top: 10px;
+}
+@media screen and (max-width: 900px) {
+  .card {
+    width: 90%;
+  }
+}

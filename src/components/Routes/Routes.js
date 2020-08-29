@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "../Home/Home";
 import Contact from "../Contact/Contact";
-import Portfolio from "../Portfolio/Portfolio";
+import Portfolio from "../../container/Portfolio/Portfolio";
 import Navigation from "../Navigation/Navigation";
 
 const Routes = () => {

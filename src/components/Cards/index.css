@@ -1,0 +1,18 @@
+.card {
+  width: 65%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  border-bottom: 2px solid darkorange;
+}
+.card a {
+  color: #181a29;
+}
+.card a:hover {
+  color: darkorange;
+}
+.card-header-title,
+.card-footer-item {
+  background-color: #24273f0a;
+  text-align: center;
+}
