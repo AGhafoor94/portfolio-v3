@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Section, Container, Heading, Loader } from "react-bulma-components";
+import {
+  Section,
+  Container,
+  Heading,
+  Loader,
+  Dropdown,
+} from "react-bulma-components";
 
 const style = {
   loadingStyle: {
@@ -9,7 +15,6 @@ const style = {
     border: "2px solid orange",
     borderTopColor: "transparent",
     borderRightColor: "transparent",
-    display: "block",
     align: "center",
     textAlign: "center",
     marginTop: "20%",
@@ -42,18 +47,24 @@ const Portfolio = () => {
           <Loader style={style.loadingStyle} />
         </Container>
       ) : (
-        <Section>
-          <Container fluid>
-            <p className="bd-notification is-info">
-              <Heading size={5} renderAs="p">
-                Fluid
-              </Heading>
-              <Heading subtitle renderAs="p">
-                Container
-              </Heading>
-            </p>
-          </Container>
-        </Section>
+        <Container fluid>
+          <p className="bd-notification is-info">
+            <Heading size={5} renderAs="p">
+              Fluid
+            </Heading>
+            <Heading subtitle renderAs="p">
+              <Dropdown hoverable value="item" label={("label", "")}>
+                {apiData.map((item, index) => {
+                  return (
+                    <Dropdown.Item value={item.id} key={index}>
+                      {item.name}
+                    </Dropdown.Item>
+                  );
+                })}
+              </Dropdown>
+            </Heading>
+          </p>
+        </Container>
       )}
     </div>
   );

@@ -1,10 +1,18 @@
 import React from "react";
 import { Card, Media, Content, Image, Heading } from "react-bulma-components";
-const Cards = () => {
+const Cards = ({
+  title,
+  heading,
+  description,
+  htmlUrl,
+  downloadLink,
+  homepage,
+  created,
+}) => {
   return (
     <Card>
       <Card.Header>
-        <Card.Header.Title>Title</Card.Header.Title>
+        <Card.Header.Title>{title}</Card.Header.Title>
       </Card.Header>
       <Card.Content>
         <Media>
@@ -16,29 +24,24 @@ const Cards = () => {
             />
           </Media.Item>
           <Media.Item>
-            <Heading size={4}>John Smith</Heading>
+            <Heading size={4}>{heading}</Heading>
             <Heading subtitle size={6}>
-              @johnsmith
+              {htmlUrl}
             </Heading>
           </Media.Item>
         </Media>
         <Content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-          iaculis mauris. <a>@bulmaio</a>.<a href="#1">#css</a>{" "}
-          <a href="#2">#responsive</a>
+          {description}
           <br />
-          <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          <time dateTime="2016-1-1">{created}</time>
         </Content>
       </Card.Content>
       <Card.Footer>
-        <Card.Footer.Item renderAs="a" href="#Yes">
-          Yes
+        <Card.Footer.Item renderAs="a" href={homepage}>
+          Homepage of App
         </Card.Footer.Item>
-        <Card.Footer.Item renderAs="a" href="#No">
-          No
-        </Card.Footer.Item>
-        <Card.Footer.Item renderAs="a" href="#Maybe">
-          Maybe
+        <Card.Footer.Item renderAs="a" href={downloadLink}>
+          Download Link
         </Card.Footer.Item>
       </Card.Footer>
     </Card>
