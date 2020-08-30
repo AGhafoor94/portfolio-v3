@@ -40,6 +40,9 @@
   .media {
     width: 100%;
   }
+  .card {
+    width: 90%;
+  }
   .cardImage {
     width: 100px;
     margin: 0 auto;
