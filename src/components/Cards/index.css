@@ -16,3 +16,19 @@
   background-color: #24273f0a;
   text-align: center;
 }
+.card-header-title {
+  border-bottom: 2px solid #33333380;
+}
+.card-footer-item {
+  border-top: 2px solid #33333380;
+  font-weight: 700;
+}
+.cardImage {
+  width: 30%;
+  float: right;
+  background-color: #333333;
+  border-radius: 100%;
+}
+.text {
+  text-align: center;
+}
