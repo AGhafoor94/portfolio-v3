@@ -1,0 +1,7 @@
+@media screen and (max-width: 900px) {
+  .loader {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+}

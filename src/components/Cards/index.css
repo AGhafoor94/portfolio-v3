@@ -3,7 +3,7 @@
   margin: auto;
   display: block;
   text-align: center;
-  border-bottom: 2px solid darkorange;
+  border-bottom: 3px solid darkorange;
 }
 .card a {
   color: #181a29;
@@ -15,4 +15,40 @@
 .card-footer-item {
   background-color: #24273f0a;
   text-align: center;
+}
+.card-header-title {
+  border-bottom: 2px solid #33333380;
+}
+.card-footer-item {
+  border-top: 2px solid #33333380;
+  font-weight: 700;
+}
+.media {
+  display: flex;
+}
+.cardImage {
+  width: 30%;
+  margin: 0;
+  float: right;
+  border-radius: 100%;
+}
+.text {
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .media {
+    width: 100%;
+  }
+  .card {
+    width: 90%;
+  }
+  .cardImage {
+    width: 100px;
+    margin: 0 auto;
+    float: left;
+    text-align: center;
+    background-color: #333333;
+    border-radius: 100%;
+  }
 }

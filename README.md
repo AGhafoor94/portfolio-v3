@@ -1,9 +1,7 @@
 # Portfolio with React
 
-## To Do
+## Done
 
 - Home page
 - Contact Page
 - Portfolio Page
-
-## Done

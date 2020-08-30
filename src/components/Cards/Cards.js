@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Content } from "react-bulma-components";
 import Moment from "react-moment";
 import "./index.css";
+import PropTypes from "prop-types";
 
 const Cards = ({
   title,
@@ -16,15 +17,8 @@ const Cards = ({
     <div style={{ marginTop: "10px", marginBottom: "10px" }}>
       <Card>
         <Card.Header>
-          <Card.Header.Title>
-            <a
-              style={{
-                textAlign: "center",
-              }}
-              href={githubUrl}
-            >
-              {title}
-            </a>
+          <Card.Header.Title renderAs="a" href={githubUrl}>
+            {title}
           </Card.Header.Title>
         </Card.Header>
         <Card.Content style={{ paddingBottom: 0 }}>
@@ -59,5 +53,15 @@ const Cards = ({
       </Card>
     </div>
   );
+};
+
+Cards.propTypes = {
+  title: PropTypes.string.isRequired,
+  githubUrl: PropTypes.string,
+  description: PropTypes.string,
+  sshLink: PropTypes.string,
+  htmlLink: PropTypes.string,
+  homepage: PropTypes.string,
+  created: PropTypes.string.isRequired,
 };
 export default Cards;

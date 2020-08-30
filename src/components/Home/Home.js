@@ -9,7 +9,7 @@ const Home = () => {
         <Hero.Body>
           <Container>
             <Heading>My Portfolio</Heading>
-            <Heading subtitle size={4}>
+            <Heading subtitle size={5}>
               Welcome to my Portfolio website made in React and using hooks for
               state.
             </Heading>
