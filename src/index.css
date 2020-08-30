@@ -15,7 +15,7 @@ a li {
 }
 a li:hover {
   transition: 0.5s;
-  color: orange;
+  color: #ffa500;
 }
 .container {
   min-height: 100%;
