@@ -9,7 +9,8 @@ const FooterContent = () => {
       <Hero.Footer>
         <Footer>
           <Container>
-            <Content style={{ textAlign: "center" }}>
+            <Content className="footerText" style={{ textAlign: "center" }}>
+              <p>Portfolio Website made by Adnan Ghafoor</p>
               <a
                 href="https://github.com/AGhafoor94/"
                 target="_blank"
@@ -17,8 +18,7 @@ const FooterContent = () => {
               >
                 <img
                   src={Images.GitHub}
-                  width="5%"
-                  style={{ float: "right" }}
+                  className="footerImage leftImage"
                   alt="Github link"
                 />
               </a>
@@ -29,12 +29,10 @@ const FooterContent = () => {
               >
                 <img
                   src={Images.LinkedIn}
-                  width="5%"
-                  style={{ float: "left" }}
+                  className="footerImage rightImage"
                   alt="Linkedin link"
                 />
               </a>
-              <p>Portfolio Website made by Adnan Ghafoor</p>
             </Content>
           </Container>
         </Footer>

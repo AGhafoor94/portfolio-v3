@@ -1,20 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Container, Loader } from "react-bulma-components";
+import { Container } from "react-bulma-components";
 import Cards from "../../components/Cards/Cards";
+import LoadingSpinner from "../../components/LoadingSpinner";
 
-const style = {
-  loadingStyle: {
-    width: 100,
-    height: 100,
-    border: "2px solid orange",
-    borderTopColor: "transparent",
-    borderRightColor: "transparent",
-    display: "block",
-    textAlign: "center",
-    marginTop: "20%",
-  },
-};
 const Portfolio = () => {
   const [apiData, setApiData] = useState();
   const [loading, setLoading] = useState(true);
@@ -37,9 +26,7 @@ const Portfolio = () => {
   return (
     <div>
       {loading ? (
-        <Container fluid className="columns is-centered">
-          <Loader style={style.loadingStyle} />
-        </Container>
+        <LoadingSpinner />
       ) : (
         <Container fluid>
           {apiData.map((item, index) => {

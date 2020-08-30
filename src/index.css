@@ -19,13 +19,17 @@ a li:hover {
 }
 .container {
   min-height: 100%;
-  padding-bottom: 60px;
+  padding-bottom: 130px;
 }
 .content a {
   margin-top: 10px;
 }
 @media screen and (max-width: 900px) {
+  .container.is-fluid {
+    padding: 0 0 130px 0;
+    width: 100%;
+  }
   .card {
-    width: 90%;
+    width: 100%;
   }
 }
