@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./index.css";
 
 const Navigation = () => {
-  const [isActive, setisActive] = useState(false);
+  const [isActive, setisActive] = useState(true);
   const click = () => {
     setisActive(!isActive);
     const navBurger = document.querySelector(".navbar-burger");

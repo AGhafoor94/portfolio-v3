@@ -46,6 +46,7 @@ const Portfolio = () => {
           {apiData.map((item, index) => {
             return (
               <Cards
+                key={index}
                 title={item.name}
                 created={item.created_at}
                 githubUrl={item.html_url}
