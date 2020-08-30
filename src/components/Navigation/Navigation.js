@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Navbar } from "react-bulma-components";
 import { Link } from "react-router-dom";
+import Pdf from "../CV/Adnan_GhafoorCV.pdf";
+
 import "./index.css";
 
 const Navigation = () => {
@@ -30,6 +32,9 @@ const Navigation = () => {
           <Navbar.Container position="end">
             <Link to="/portfolio">
               <Navbar.Item renderAs="li">Portfolio</Navbar.Item>
+            </Link>
+            <Link to={Pdf} target="_blank">
+              <Navbar.Item renderAs="li">CV</Navbar.Item>
             </Link>
             <Link to="/contact">
               <Navbar.Item renderAs="li">Contact</Navbar.Item>
