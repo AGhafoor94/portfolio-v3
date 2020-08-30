@@ -26,7 +26,6 @@ const Portfolio = () => {
           "https://api.github.com/users/AGhafoor94/repos"
         );
         setApiData(data);
-        console.log(apiData);
         setLoading(false);
       };
       response();
