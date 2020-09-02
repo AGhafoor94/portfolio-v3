@@ -11,9 +11,6 @@ const Routes = () => {
       <Router>
         <Navigation />
         <Switch>
-          <Route path="/portfolio-v3" exact>
-            <Home />
-          </Route>
           <Route path="/portfolio-v3/" exact>
             <Home />
           </Route>

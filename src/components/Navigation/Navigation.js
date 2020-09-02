@@ -23,7 +23,7 @@ const Navigation = () => {
     <div>
       <Navbar>
         <Navbar.Brand>
-          <Link to="/">
+          <Link to="/portfolio-v3/">
             <Navbar.Item renderAs="li">Adnan</Navbar.Item>
           </Link>
           <Navbar.Burger onClick={click} />
